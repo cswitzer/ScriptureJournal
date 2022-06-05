@@ -18,7 +18,7 @@ namespace MyScriptureJournal.Models
 
         public string Impression { get; set; }
 
-        [DataType(DataType.Date)]
+        [DataType(DataType.Date), Display(Name = "Date Added")]
         public DateTime DateAdded { get; set; }
     }
 }

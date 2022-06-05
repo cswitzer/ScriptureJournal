@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{KeyWordSearchString?}"
 @model MyScriptureJournal.Pages.Scriptures.IndexModel
 
 @{
@@ -10,6 +10,17 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+
+<form>
+    <p>
+        <select asp-for="BookSection" asp-items="Model.Books">
+            <option value="">All</option>
+        </select>
+        Impression: <input type="text" asp-for="KeyWordSearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
